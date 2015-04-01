@@ -72,7 +72,7 @@
 		fi \
 	}; f"
 
-	# Add only whitespace changes
+	# Add only non-whitespace changes
 	addnw = "!sh -c 'git diff -w --no-color \"$@\" | git apply --cached --ignore-whitespace' -"
 
 [apply]
