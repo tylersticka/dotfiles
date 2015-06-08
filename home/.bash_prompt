@@ -51,8 +51,8 @@ prompt_git() {
 # Color    Normal  Bright
 # -----------------------
 # black    0        8
-# red      1			  9
-# green    2			 10
+# red      1        9
+# green    2       10
 # yellow   3       11
 # blue     4       12
 # magenta  5       13
