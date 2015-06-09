@@ -23,17 +23,20 @@ prompt_git() {
 
 			# Head is not detached
 			if [ -n "$(git symbolic-ref --short -q HEAD)" ]; then
+				# Has remote
+				if [ $(git rev-parse --abrev-ref @'{u}' &>/dev/null; echo "${?}") == '0' ]; then
 
-				# Upstream revisions
-				if [ -n "$(git rev-list --right-only HEAD...@'{u}')" ]; then
-					s+='⇣';
+					# Upstream revisions
+					if [ -n "$(git rev-list --right-only HEAD...@'{u}')" ]; then
+						s+='⇣';
+					fi;
+
+					# Downstream revisions
+					if [ -n "$(git rev-list --left-only HEAD...@'{u}')" ]; then
+						s+='⇡';
+					fi;
+
 				fi;
-
-				# Downstream revisions
-				if [ -n "$(git rev-list --left-only HEAD...@'{u}')" ]; then
-					s+='⇡';
-				fi;
-
 			fi;
 
 		fi;
