@@ -21,14 +21,19 @@ prompt_git() {
 				s+='*';
 			fi;
 
-			# Upstream revisions
-			if [ -n "$(git rev-list --right-only HEAD...@'{u}')" ]; then
-				s+='⇣';
-			fi;
+			# Head is not detached
+			if [ -n "$(git symbolic-ref --short -q HEAD)" ]; then
 
-			# Downstream revisions
-			if [ -n "$(git rev-list --left-only HEAD...@'{u}')" ]; then
-				s+='⇡';
+				# Upstream revisions
+				if [ -n "$(git rev-list --right-only HEAD...@'{u}')" ]; then
+					s+='⇣';
+				fi;
+
+				# Downstream revisions
+				if [ -n "$(git rev-list --left-only HEAD...@'{u}')" ]; then
+					s+='⇡';
+				fi;
+
 			fi;
 
 		fi;
