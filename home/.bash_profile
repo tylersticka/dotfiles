@@ -1,5 +1,6 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+# Use local git
+# http://blog.grayghostvisuals.com/git/how-to-keep-git-updated/
+export PATH=/usr/local/bin:$PATH;
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
