@@ -18,7 +18,7 @@ prompt_git() {
 
 			# Dirty
 			if [ -n "$(git status --porcelain 2> /dev/null)" ]; then
-				s+='*';
+				s+='✱';
 			fi;
 
 			# Head is not detached
@@ -50,7 +50,7 @@ prompt_git() {
 
 		[ -n "${s}" ] && s=" ${s}";
 
-		echo -e "${1}${branchName}$(tput setaf 14)${s}";
+		echo -e " ${1}on git:$(tput setaf 12)${branchName}$(tput setaf 9)${s}";
 	else
 		return;
 	fi;
@@ -72,9 +72,9 @@ prompt_git() {
 
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
-PS1+="\[$(tput bold)\]\n"; # newline
-PS1+="\[$(tput setaf 12)\]\w"; # working directory
-PS1+="\[$(tput sgr0)\]\$(prompt_git \" $(tput setaf 8)\")"; # Git repository details
+PS1+="\n"; # newline
+PS1+="\[$(tput setaf 11)\]\w"; # working directory
+PS1+="\[$(tput sgr0)\]\$(prompt_git)"; # Git repository details
 PS1+="\n";
 PS1+="\[$(tput setaf 13)\]❯ \[$(tput sgr0)\]"; # `❯` (and reset color)
 export PS1;
