@@ -50,7 +50,7 @@ prompt_git() {
 
 		[ -n "${s}" ] && s=" ${s}";
 
-		echo -e " ${1}on git:$(tput setaf 12)${branchName}$(tput setaf 9)${s}";
+		echo -e " ${1}on $(tput setaf 3)${branchName}$(tput setaf 9)${s}";
 	else
 		return;
 	fi;
@@ -73,8 +73,8 @@ prompt_git() {
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
 PS1+="\n"; # newline
-PS1+="\[$(tput setaf 11)\]\w"; # working directory
+PS1+="\[$(tput setaf 6)\]\w"; # working directory
 PS1+="\[$(tput sgr0)\]\$(prompt_git)"; # Git repository details
 PS1+="\n";
-PS1+="\[$(tput setaf 13)\]❯ \[$(tput sgr0)\]"; # `❯` (and reset color)
+PS1+="\[$(tput setaf 5)\]❯ \[$(tput sgr0)\]"; # `❯` (and reset color)
 export PS1;
