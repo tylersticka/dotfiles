@@ -60,6 +60,7 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hypercwd',
+    'hyperlinks',
     'hyperterm-1password',
     'hyperterm-atom-dark',
     'hyperterm-tab-icons'
