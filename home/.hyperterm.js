@@ -61,9 +61,8 @@ module.exports = {
   plugins: [
     'hypercwd',
     'hyperterm-1password',
-    'hyperterm-atom-dark'
-    // 'hyperterm-seti'
-    // 'hyperterm-wwdc'
+    'hyperterm-atom-dark',
+    'hyperterm-tab-icons'
   ],
 
   // in development, you can create a directory under
