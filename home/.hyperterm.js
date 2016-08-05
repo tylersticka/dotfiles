@@ -30,6 +30,13 @@ module.exports = {
     // custom initial window size
     windowSize: [800, 450],
 
+    // hyperlinks customization
+    termCSS: `
+      x-screen a {
+        color: inherit;
+      }
+    `
+
     // some color overrides. see http://bit.ly/29k1iU2 for
     // the full list
     // colors: [
