@@ -70,6 +70,7 @@ module.exports = {
     'hyperlinks',
     'hyperterm-1password',
     'hyperterm-atom-dark',
+    'hyperterm-paste',
     'hyperterm-tab-icons'
   ],
 
