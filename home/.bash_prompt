@@ -73,8 +73,9 @@ prompt_git() {
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
 PS1+="\n"; # newline
+PS1+="\[$(tput setaf 15)\]⚡ \[$(tput sgr0)\]"
 PS1+="\[$(tput setaf 6)\]\w"; # working directory
 PS1+="\[$(tput sgr0)\]\$(prompt_git)"; # Git repository details
 PS1+="\n";
-PS1+="\[$(tput setaf 5)\]❯ \[$(tput sgr0)\]"; # `❯` (and reset color)
+PS1+="\[$(tput setaf 5)\]→ \[$(tput sgr0)\]"; # Arrow (and reset color)
 export PS1;
