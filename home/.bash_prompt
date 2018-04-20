@@ -71,7 +71,7 @@ prompt_git() {
 # bold     bold (heh)
 
 # Set the terminal title to the current working directory.
-PS1="\[\033]0;\w\007\]";
+PS1="\[\033]0;\W\007\]";
 PS1+="\n"; # newline
 #PS1+="\[$(tput setaf 15)\]⚡ \[$(tput sgr0)\]"
 PS1+="\[$(tput setaf 15)\]⚡︎ \[$(tput sgr0)\]"

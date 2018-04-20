@@ -7,23 +7,18 @@ module.exports = {
     fontFamily: '"Fira Mono OT", "Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
     // custom initial window size
-    windowSize: [800, 450],
-
-    // hyperlinks customization
-    termCSS: `
-      x-screen a {
-        color: inherit;
-      }
-    `
+    windowSize: [800, 450]
   },
 
   plugins: [
     'hypercwd',
     'hyperlinks',
-    'hyperterm-1password',
-    'hyperterm-atom-dark',
-    'hyperterm-paste',
+    'hyper-search',
+    'hyper-one-dark',
+    // 'hyperterm-1password',
+    // 'hyperterm-paste',
     // 'hyper-alt-click',
-    'hyperterm-tab-icons'
+    // 'hyper-tab-icons',
+    'hyperclean'
   ]
 };
