@@ -32,3 +32,9 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/autojump.sh" ]
 elif [ -f /usr/share/autojump/autojump.sh ]; then
 	source /usr/share/autojump/autojump.sh;
 fi
+
+# nvm
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
