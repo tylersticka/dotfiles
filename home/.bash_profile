@@ -1,6 +1,8 @@
 # Use local git
 # http://blog.grayghostvisuals.com/git/how-to-keep-git-updated/
 export PATH=/usr/local/bin:$PATH;
+export PATH=/usr/local/sbin:$PATH;
+export PATH=/usr/local/opt/python/libexec/bin:$PATH;
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -11,7 +13,7 @@ done;
 unset file;
 
 # Homeshick
-source ~/.homesick/repos/homeshick/homeshick.sh;
+#source ~/.homesick/repos/homeshick/homeshick.sh;
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;

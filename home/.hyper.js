@@ -19,6 +19,7 @@ module.exports = {
     // 'hyperterm-paste',
     // 'hyper-alt-click',
     // 'hyper-tab-icons',
-    'hyperclean'
+    'hyperclean',
+    "hyperalfred"
   ]
 };
